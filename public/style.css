@@ -1,0 +1,36 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0611;--card:#141020;--bd:#2a1f42;--ac:#8b5cf6;--ac2:#a78bfa;--glow:rgba(139,92,246,.5);--tx:#ece6f5;--mt:#7a6b95}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;line-height:1.55;padding:24px 20px;background-image:radial-gradient(circle at 20% 0%,rgba(139,92,246,.15),transparent 55%),radial-gradient(circle at 100% 100%,rgba(124,58,237,.10),transparent 55%);background-attachment:fixed}
+.wrap{max-width:640px;margin:0 auto;padding:40px 0 60px;text-align:center}
+.brand{font-size:11px;font-weight:700;letter-spacing:4px;color:var(--ac2);text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(24px,5vw,34px);font-weight:800;margin-bottom:10px;background:linear-gradient(180deg,#fff,#c9b8e8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--mt);font-size:14.5px;margin-bottom:32px}
+.game-list{display:flex;flex-direction:column;gap:12px;margin-bottom:8px}
+.game-card{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px 20px;text-decoration:none;color:var(--tx);transition:.25s;text-align:left}
+.game-card:hover{border-color:var(--ac);transform:translateY(-2px);box-shadow:0 0 30px rgba(139,92,246,.15)}
+.game-info h3{font-size:15px;font-weight:700;margin-bottom:4px}
+.game-info p{font-size:12.5px;color:var(--mt);line-height:1.5}
+.game-action{flex-shrink:0;font-size:12px;font-weight:700;color:var(--ac2);background:rgba(139,92,246,.10);padding:8px 14px;border-radius:999px}
+.keybox{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 20px;margin:24px 0 14px;font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--ac2);word-break:break-all;box-shadow:0 0 30px rgba(139,92,246,.12)}
+.copy{flex-shrink:0;background:linear-gradient(135deg,#8b5cf6,#7c3aed);color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:.25s}
+.copy:hover{transform:translateY(-1px);box-shadow:0 0 20px var(--glow)}
+.hint{font-size:12.5px;color:var(--mt);margin-bottom:28px}
+.hint strong{color:var(--ac2)}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:12px 22px;border-radius:999px;font-size:13.5px;font-weight:700;text-decoration:none;transition:.25s;border:none;cursor:pointer;font-family:inherit}
+.btn.primary{background:linear-gradient(135deg,#8b5cf6,#7c3aed);color:#fff;box-shadow:0 0 30px var(--glow)}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 0 50px var(--glow)}
+.btn.ghost{background:transparent;border:1px solid rgba(139,92,246,.4);color:var(--tx)}
+.btn.ghost:hover{border-color:var(--ac2);color:var(--ac2)}
+footer{font-size:11.5px;color:var(--mt);line-height:1.7;margin-top:40px;padding-top:24px;border-top:1px solid var(--bd)}
+footer a{color:var(--ac2);text-decoration:none}
+.muted{color:#554a6b;font-size:11px}
+.verify-form{display:flex;gap:10px;margin:20px 0 24px;flex-wrap:wrap;justify-content:center}
+.verify-form input{flex:1;min-width:200px;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 18px;color:var(--tx);font-family:'JetBrains Mono',monospace;font-size:13px;outline:none;transition:.25s}
+.verify-form input:focus{border-color:var(--ac);box-shadow:0 0 20px rgba(139,92,246,.15)}
+.status{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:20px;font-size:13.5px;line-height:1.8;text-align:left;word-break:break-all}
+.status.ok{border-color:rgba(139,92,246,.5);box-shadow:0 0 30px rgba(139,92,246,.15)}
+.status.ok strong{color:#a78bfa;font-size:15px;letter-spacing:1px}
+.status.warn{border-color:rgba(250,180,90,.4)}
+.status.warn strong{color:#fab45a;font-size:15px;letter-spacing:1px}
+.status.err{border-color:rgba(250,90,90,.4);color:#fa8a8a}
