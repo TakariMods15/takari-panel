@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Takari Panel — Get Key</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">TAKARI PANEL</div>
+  <h1>Get Key</h1>
+  <p class="sub">Pilih game di bawah untuk ambil key asli.</p>
+
+  <div class="game-list" id="games">
+    <p class="muted">Loading...</p>
+  </div>
+
+  <div class="actions" style="margin-top:24px">
+    <a href="/verify" class="btn ghost">Cek Key →</a>
+  </div>
+
+  <footer>
+    © 2026 TAKARI PANEL<br>
+    <span class="muted">Jika link error atau butuh update fitur, hubungi:</span><br>
+    <a href="https://t.me/Takariofficiall" target="_blank" rel="noopener">@Takariofficiall</a>
+  </footer>
+</div>
+
+<script>
+fetch('/api/games')
+  .then(r => r.json())
+  .then(games => {
+    const el = document.getElementById('games');
+    if (!games.length) { el.innerHTML = '<p class="muted">Belum ada game.</p>'; return; }
+    el.innerHTML = games.map(g => `
+      <a class="game-card" href="/GETKEY/${g.slug}">
+        <div class="game-info">
+          <h3>${g.name}</h3>
+          <p>${g.desc}</p>
+        </div>
+        <div class="game-action">Get Key →</div>
+      </a>
+    `).join('');
+  })
+  .catch(() => {
+    document.getElementById('games').innerHTML = '<p class="muted">Gagal load data.</p>';
+  });
+</script>
+</body>
+</html>
